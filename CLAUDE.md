@@ -2,16 +2,18 @@
 
 ## Commands
 
-- `npm run dev` — start dev server
-- `npm run build` — typecheck with `tsc` then build with Vite
-- `npm run lint` — run ESLint
-- `npm test` — run Vitest in watch mode
-- `npm run test:run` — run Vitest once
-- `npm run test:coverage` — run Vitest with coverage
-- `npx shadcn@latest add <component>` — add a shadcn/ui component
+- `bun run dev` — start dev server
+- `bun run build` — typecheck with `tsc` then build with Vite
+- `bun run lint` — run ESLint
+- `bun test` — run Vitest in watch mode
+- `bun run test:run` — run Vitest once
+- `bun run test:coverage` — run Vitest with coverage
+- `bunx shadcn@latest add <component>` — add a shadcn/ui component
+- `bun install` — install dependencies (uses bun.lock)
 
 ## Tech Stack
 
+- Bun as the package manager and script runner
 - React 19, TypeScript (strict mode), Vite
 - Tailwind CSS v4 (via Vite plugin, no tailwind.config — theme is in `src/index.css`)
 - shadcn/ui (New York style, Lucide icons) — config in `components.json`
@@ -73,7 +75,7 @@ Each route/domain lives in `src/features/<name>/` with this structure:
 | Feature-specific component | `src/features/<name>/components/` | `features/dashboard/components/Chart.tsx` |
 | Feature-specific hook | `src/features/<name>/hooks/` | `features/settings/hooks/useSettings.ts` |
 | Reusable UI component | `src/components/` | `components/StatsCard.tsx` |
-| shadcn/ui component | `src/components/ui/` | Added via `npx shadcn@latest add` |
+| shadcn/ui component | `src/components/ui/` | Added via `bunx shadcn@latest add` |
 | Shared hook | `src/root/hooks/` | `root/hooks/useDatabase.ts` |
 | Database schemas | `src/root/db/` | `root/db/schema.ts` |
 | Layout / shell components | `src/root/components/` | `root/components/RootLayout.tsx` |
@@ -102,4 +104,4 @@ Each route/domain lives in `src/features/<name>/` with this structure:
 
 ### shadcn/ui
 
-Do **not** move `src/lib/utils.ts` or `src/components/ui/` — `components.json` aliases depend on these paths. When adding new shadcn components, run `npx shadcn@latest add <component>` from the project root.
+Do **not** move `src/lib/utils.ts` or `src/components/ui/` — `components.json` aliases depend on these paths. When adding new shadcn components, run `bunx shadcn@latest add <component>` from the project root.
