@@ -1,11 +1,11 @@
-import { createRxDatabase, type RxDatabase, type RxCollection } from 'rxdb';
-import { getRxStorageDexie } from 'rxdb/plugins/storage-dexie';
+import { createRxDatabase, type RxCollection, type RxDatabase } from "rxdb";
+import { getRxStorageDexie } from "rxdb/plugins/storage-dexie";
 import {
-  dashboardItemSchema,
-  userSettingsSchema,
   type DashboardItem,
+  dashboardItemSchema,
   type UserSettings,
-} from './schema';
+  userSettingsSchema,
+} from "./schema";
 
 export type DatabaseCollections = {
   dashboard_items: RxCollection<DashboardItem>;
@@ -25,7 +25,7 @@ export async function getDatabase(): Promise<AppDatabase> {
 
 async function createDatabase(): Promise<AppDatabase> {
   const db = await createRxDatabase<DatabaseCollections>({
-    name: 'dashboarddb',
+    name: "dashboarddb",
     storage: getRxStorageDexie(),
     ignoreDuplicate: true,
   });

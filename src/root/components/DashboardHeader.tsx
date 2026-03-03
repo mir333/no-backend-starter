@@ -1,8 +1,8 @@
 import { Link } from "@tanstack/react-router";
-import { Logo } from "./Logo";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import { Logo } from "./Logo";
 
 export function DashboardHeader() {
   return (

@@ -1,11 +1,5 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
 interface ActivityItem {
@@ -43,14 +37,10 @@ export function RecentActivity() {
                   <Badge variant="outline" className="text-xs">
                     {activity.category}
                   </Badge>
-                  <span className="text-xs text-muted-foreground">
-                    {activity.timestamp}
-                  </span>
+                  <span className="text-xs text-muted-foreground">{activity.timestamp}</span>
                 </div>
               </div>
-              {index < mockActivities.length - 1 && (
-                <Separator className="mt-4" />
-              )}
+              {index < mockActivities.length - 1 && <Separator className="mt-4" />}
             </div>
           ))}
         </div>

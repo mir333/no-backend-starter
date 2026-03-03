@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { getDatabase, type AppDatabase } from '@/root/db';
+import { useEffect, useState } from "react";
+import { type AppDatabase, getDatabase } from "@/root/db";
 
 export function useDatabase() {
   const [db, setDb] = useState<AppDatabase | null>(null);
@@ -18,7 +18,7 @@ export function useDatabase() {
         }
       } catch (err) {
         if (!cancelled) {
-          setError(err instanceof Error ? err : new Error('Failed to initialize database'));
+          setError(err instanceof Error ? err : new Error("Failed to initialize database"));
           setIsLoading(false);
         }
       }

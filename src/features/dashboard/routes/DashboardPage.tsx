@@ -1,6 +1,6 @@
-import { StatsOverview } from "../components/StatsOverview";
-import { RecentActivity } from "../components/RecentActivity";
 import { DatabaseStatus } from "../components/DatabaseStatus";
+import { RecentActivity } from "../components/RecentActivity";
+import { StatsOverview } from "../components/StatsOverview";
 
 export function DashboardPage() {
   return (

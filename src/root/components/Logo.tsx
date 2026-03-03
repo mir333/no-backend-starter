@@ -5,7 +5,10 @@ export function Logo({ className = "h-8 w-8" }: { className?: string }) {
       viewBox="0 0 100 100"
       fill="none"
       className={className}
+      role="img"
+      aria-label="LC Dashboard logo"
     >
+      <title>LC Dashboard logo</title>
       <defs>
         <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stopColor="#6366f1" />

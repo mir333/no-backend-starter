@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useCallback, useState } from "react";
 import { useDatabase } from "@/root/hooks/useDatabase";
 
 export interface SettingsState {
@@ -35,7 +35,7 @@ export function useSettings() {
         setIsLoading(false);
       }
     },
-    [db, settings]
+    [db, settings],
   );
 
   return {

@@ -1,19 +1,19 @@
-import { cleanup, render, type RenderOptions } from '@testing-library/react';
-import { afterEach } from 'vitest';
-import type { ReactElement } from 'react';
 import {
-  createRouter,
+  createMemoryHistory,
   createRootRoute,
   createRoute,
-  createMemoryHistory,
+  createRouter,
   RouterProvider,
-} from '@tanstack/react-router';
+} from "@tanstack/react-router";
+import { cleanup, type RenderOptions, render } from "@testing-library/react";
+import type { ReactElement } from "react";
+import { afterEach } from "vitest";
 
 afterEach(() => {
   cleanup();
 });
 
-function customRender(ui: ReactElement, options?: Omit<RenderOptions, 'wrapper'>) {
+function customRender(ui: ReactElement, options?: Omit<RenderOptions, "wrapper">) {
   return render(ui, { ...options });
 }
 
@@ -23,7 +23,7 @@ function customRender(ui: ReactElement, options?: Omit<RenderOptions, 'wrapper'>
  */
 function renderWithRouter(
   ui: ReactElement,
-  { route = '/', ...options }: { route?: string } & Omit<RenderOptions, 'wrapper'> = {}
+  { route = "/", ...options }: { route?: string } & Omit<RenderOptions, "wrapper"> = {},
 ) {
   const rootRoute = createRootRoute({
     component: () => ui,
@@ -31,13 +31,13 @@ function renderWithRouter(
 
   const indexRoute = createRoute({
     getParentRoute: () => rootRoute,
-    path: '/',
+    path: "/",
     component: () => null,
   });
 
   const settingsRoute = createRoute({
     getParentRoute: () => rootRoute,
-    path: '/settings',
+    path: "/settings",
     component: () => null,
   });
 
@@ -52,5 +52,5 @@ function renderWithRouter(
 }
 
 export { customRender as render, renderWithRouter };
-export { screen, within, waitFor } from '@testing-library/react';
-export { default as userEvent } from '@testing-library/user-event';
+export { screen, waitFor, within } from "@testing-library/react";
+export { default as userEvent } from "@testing-library/user-event";

@@ -4,7 +4,9 @@
 
 - `bun run dev` — start dev server
 - `bun run build` — typecheck with `tsc` then build with Vite
-- `bun run lint` — run ESLint
+- `bun run lint` — run Biome linter + formatter check
+- `bun run lint:fix` — auto-fix lint and format issues
+- `bun run format` — format all source files
 - `bun test` — run Vitest in watch mode
 - `bun run test:run` — run Vitest once
 - `bun run test:coverage` — run Vitest with coverage
@@ -19,6 +21,7 @@
 - shadcn/ui (New York style, Lucide icons) — config in `components.json`
 - TanStack Router (code-based routing, not file-based)
 - RxDB with Dexie storage (IndexedDB) for local-first data persistence
+- Biome for linting and formatting (replaces ESLint + Prettier) — config in `biome.json`
 - Vitest + Testing Library + jsdom for tests
 
 ## Project Structure

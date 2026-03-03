@@ -1,10 +1,4 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface StatsCardProps {
   title: string;
@@ -28,12 +22,9 @@ export function StatsCard({ title, value, description, icon, trend }: StatsCardP
         <div className="text-2xl font-bold">{value}</div>
         <CardDescription className="flex items-center gap-1">
           {trend && (
-            <span
-              className={
-                trend.positive ? "text-green-600" : "text-red-600"
-              }
-            >
-              {trend.positive ? "+" : ""}{trend.value}
+            <span className={trend.positive ? "text-green-600" : "text-red-600"}>
+              {trend.positive ? "+" : ""}
+              {trend.value}
             </span>
           )}
           {description}

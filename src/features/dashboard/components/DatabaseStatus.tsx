@@ -1,11 +1,5 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useDatabase } from "@/root/hooks/useDatabase";
 
 export function DatabaseStatus() {
@@ -35,9 +29,7 @@ export function DatabaseStatus() {
           </div>
           <div className="flex items-center justify-between">
             <span className="text-sm text-muted-foreground">Database</span>
-            <span className="text-sm font-medium">
-              {db ? db.name : "—"}
-            </span>
+            <span className="text-sm font-medium">{db ? db.name : "—"}</span>
           </div>
           <div className="flex items-center justify-between">
             <span className="text-sm text-muted-foreground">Collections</span>

@@ -1,4 +1,4 @@
-import type { RxJsonSchema } from 'rxdb';
+import type { RxJsonSchema } from "rxdb";
 
 export interface DashboardItem {
   id: string;
@@ -11,61 +11,61 @@ export interface DashboardItem {
 
 export const dashboardItemSchema: RxJsonSchema<DashboardItem> = {
   version: 0,
-  primaryKey: 'id',
-  type: 'object',
+  primaryKey: "id",
+  type: "object",
   properties: {
     id: {
-      type: 'string',
+      type: "string",
       maxLength: 100,
     },
     title: {
-      type: 'string',
+      type: "string",
     },
     value: {
-      type: 'number',
+      type: "number",
     },
     category: {
-      type: 'string',
+      type: "string",
     },
     createdAt: {
-      type: 'string',
-      format: 'date-time',
+      type: "string",
+      format: "date-time",
     },
     updatedAt: {
-      type: 'string',
-      format: 'date-time',
+      type: "string",
+      format: "date-time",
     },
   },
-  required: ['id', 'title', 'value', 'category', 'createdAt', 'updatedAt'],
+  required: ["id", "title", "value", "category", "createdAt", "updatedAt"],
 };
 
 export interface UserSettings {
   id: string;
-  theme: 'light' | 'dark';
+  theme: "light" | "dark";
   language: string;
   updatedAt: string;
 }
 
 export const userSettingsSchema: RxJsonSchema<UserSettings> = {
   version: 0,
-  primaryKey: 'id',
-  type: 'object',
+  primaryKey: "id",
+  type: "object",
   properties: {
     id: {
-      type: 'string',
+      type: "string",
       maxLength: 100,
     },
     theme: {
-      type: 'string',
-      enum: ['light', 'dark'],
+      type: "string",
+      enum: ["light", "dark"],
     },
     language: {
-      type: 'string',
+      type: "string",
     },
     updatedAt: {
-      type: 'string',
-      format: 'date-time',
+      type: "string",
+      format: "date-time",
     },
   },
-  required: ['id', 'theme', 'language', 'updatedAt'],
+  required: ["id", "theme", "language", "updatedAt"],
 };

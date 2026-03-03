@@ -1,12 +1,6 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { useSettings } from "../hooks/useSettings";
 
@@ -18,17 +12,13 @@ export function SettingsForm() {
       <Card>
         <CardHeader>
           <CardTitle>Appearance</CardTitle>
-          <CardDescription>
-            Customize how the dashboard looks and feels
-          </CardDescription>
+          <CardDescription>Customize how the dashboard looks and feels</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-medium">Theme</p>
-              <p className="text-sm text-muted-foreground">
-                Select your preferred color scheme
-              </p>
+              <p className="text-sm text-muted-foreground">Select your preferred color scheme</p>
             </div>
             <div className="flex gap-2">
               <Button
@@ -55,9 +45,7 @@ export function SettingsForm() {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-medium">Language</p>
-              <p className="text-sm text-muted-foreground">
-                Choose your display language
-              </p>
+              <p className="text-sm text-muted-foreground">Choose your display language</p>
             </div>
             <Badge variant="secondary">{settings.language.toUpperCase()}</Badge>
           </div>
@@ -67,9 +55,7 @@ export function SettingsForm() {
       <Card>
         <CardHeader>
           <CardTitle>Data Storage</CardTitle>
-          <CardDescription>
-            Manage local data persistence settings
-          </CardDescription>
+          <CardDescription>Manage local data persistence settings</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="flex items-center justify-between">
